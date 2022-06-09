@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+ul li {
+    list-style: none;
+}
+button {
+    cursor: pointer;
+}
+a:focus,a:active {
+    outline:none;
+}
+a, a:visited, a:hover {
+    text-decoration: none;
+}

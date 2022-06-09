@@ -1,0 +1,78 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 88px;
+    background-color: $menuColor;
+
+    .header__main {
+        display: flex; 
+        align-items: center;
+        margin-left: 16px;
+        .header__menu {
+           margin-right: 16px;   
+        }
+        
+        @media screen and (min-width: 768px) {
+            .header__menu {
+                display: flex;
+                margin-right: 0;
+                &::after {
+                    content: "";
+                    width: 2px;
+                    height: 32px;
+                    // border: 1px solid $elmColor;
+                    background-color: $elmColor;
+                    border-radius: 1px;
+                    margin: 4px 20px;
+                }
+            }
+        }
+    }
+    
+    .header__extra {
+        display: flex;
+        .header__contacts {
+            display: none;
+            justify-content: space-evenly;
+            .header__call {
+                margin-right: 16px;
+            }
+            .header__chat {
+                margin-right: 16px;
+            }
+        }
+        .header__repair-status {
+            display: flex;
+            justify-content: space-evenly;
+            &::before {
+                content: "";
+                width: 2px;
+                height: 32px;
+                background: $elmColor;
+                border-radius: 1px;
+                margin: 4px 16px;
+            }
+            .header__repair {
+                margin-right: 16px;
+            }
+            .header__check-status {
+                margin-right: 16px;
+            }
+            
+        }
+        @media screen and (min-width: 768px) {
+            .header__contacts {
+                display: flex;
+            }
+        }
+
+    }
+
+}
+@media screen and (min-width: 1440px) {
+    .header {
+        display: none;
+    }
+}
+

@@ -1,17 +1,68 @@
-$bgColor: #24292e;
-$text: #fff;
+$bgColor: #F8F8F8;
+$menuColor: #FFFFFF;
+$btnColor: #FF3E79;
+$elmColor: #EAEAEA;
+$text: #1B1C21;
+$psdColor: #41F6D7;
+$actColor: #7E7E82;
+$borderColor: #B8FFEC;
+
+@import "src/scss/null.scss";
+@import "src/scss/header.scss";
+@import "src/scss/menu.scss";
+@import "src/scss/content.scss";
 
 @font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
+  font-family: "TTLakes";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/TTLakes-Regular.ttf");
+}
+@font-face {
+  font-family: "TTLakes";
+  font-weight: 550;
+  font-style: normal;
+  src: url("../fonts/TTLakes-Medium.ttf");
+}
+@font-face {
+  font-family: "TTLakes";
+  font-weight: 700;
+  font-style: normal;
+  src: ("../fonts/TTLakes-Bold.ttf");
 }
 
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
+.icon-button {
+  width: 40px;
+  height: 40px;
+  background: $btnColor;
+  border-radius: 20px;
+  position: relative;
+  border: none;
 }
+.icon-image {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+body {
+  font-family: "TTLakes";
+  max-width: 1440px;
+  margin: auto;
+  &.overlay::before {
+    content: "";
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+    background-color: $menuColor;
+    mix-blend-mode: normal;
+    opacity: 0.96;
+  }
+}
+.hidden {
+  display: none;
+}
+

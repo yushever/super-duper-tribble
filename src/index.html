@@ -1,14 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>Задание 1.7</title>
 </head>
 <body>
-<img src="./img/webpack.svg" alt="Webpack Logo" width="200px">
-<h3>мяу мяу мяу</h3>
+    <header>
+        <div class="header">
+            <div class="header__main">
+                <div class="header__menu">
+                    <button class="header__menu-burger icon-button">
+                        <img class="icon-image" src="img/icons/burger.svg" width="20px" height="20px">
+                    </button>
+                </div>
+                <div class="header__logo">
+                    <div class="header__logo-image">
+                        <img src="img/logo.svg" width="96.55px" height="50.81px" alt="Логотип">
+                    </div>
+                </div>
+            </div>
+            <div class="header__extra">
+                <div class="header__contacts">
+                    <div class="header__call">
+                        <button class="call-button icon-button">
+                            <img class="icon-image" src="img/icons/phone.svg" width="20px" height="20px">
+                        </button>
+                    </div>
+                    <div class="header__chat">
+                        <button class="chat-button icon-button">
+                            <img class="icon-image" src="img/icons/chat.svg" width="20px" height="20px">
+                        </button>
+                    </div>
+                    <div class="header__profile">
+                        <button class="profile-button icon-button">
+                            <img class="icon-image" src="img/icons/profile.svg" width="20px" height="20px">
+                        </button>
+                    </div>
+                </div>
+                <div class="header__repair-status">
+                    <div class="header__repair">
+                        <button class="repair-button icon-button">
+                            <img class="icon-image" src="img/icons/repair.svg" width="20px" height="20px">
+                        </button>
+                    </div>
+                    <div class="header__check-status">
+                        <button class="status-button icon-button">
+                            <img class="icon-image" src="img/icons/checkstatus.svg" width="20px" height="20px">
+                        </button>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <div class="content__heading">
+                Услуги и сервисы
+            </div>
+            <nav class="content__nav">
+                <ul class="content__list">
+                    <li class="content__point">
+                        <button class="content__option">Ремонтируемые устройства</button>
+                    </li>
+                    <li class="content__point">
+                        <button class="content__option">Дополнительные услуги</button>
+                    </li>
+                    <li class="content__point">
+                        <button class="content__option">Цены на услуги</button>
+                    </li>
+                    <li class="content__point">
+                        <button class="content__option">Специальные цены</button>
+                    </li>
+                    <li class="content__point">
+                        <button class="content__option">Адреса сервисных центров</button>
+                    </li>
+                    <li class="content__point">
+                        <button class="content__option">Отзывы</button>
+                    </li>
+                </ul>
+            </nav>
+            <div class="content__main">
+                <div class="content__text-content">
+                    <div class="content__text">
+                        Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.<br><br>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+                    </div>
+                    <button class="content__more">
+                        Читать далее
+                    </button>
+                </div>
+                <img class="content__image" src="img/img.jpg" alt="Картинка">
+            </div>
+
+        </div>
+        
+    </main>
+    <div class="open-burger hidden">
+        <div class="open-burger__content">
+            <div class="open-burger__header">
+                <div class="open-burger__close">
+                    <button class="open-burger__close-button icon-button">
+                        <img class="icon-image" src="img/icons/close.svg" width="20px" height="20px">
+                    </button>
+                    <div class="open-burger__logo">
+                        <div class="open-burger__logo-image">
+                            <img src="img/logo.svg" width="97px" height="51px" alt="Логотип">
+                        </div>
+                    </div>
+                </div>
+                <div class="open-burger__search-menu">
+                    <div class="open-burger__search">
+                        <button class="open-burger__search-button icon-button">
+                            <img class="icon-image" src="img/icons/search.svg" width="20px" height="20px">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="open-burger__menu">
+                <ul class="open-burger__list">
+                    <li class="open-burger__option">
+                        <a class="open-burger__ref" href="#repair">Ремонт техники</a>
+                    </li>
+                    <li class="open-burger__option">
+                        <a class="open-burger__ref" href="#services">Услуги и сервисы</a>
+                    </li>
+                    <li class="open-burger__option">
+                        <a class="open-burger__ref" href="#corporate-clients">Корпоративным клиентам</a>
+                    </li>
+                    <li class="open-burger__option">
+                        <a class="open-burger__ref" href="#sellers">Продавцам техники</a>
+                    </li>
+                    <li class="open-burger__option">
+                        <a class="open-burger__ref" href="#partners">Партнерам</a>
+                    </li>
+                    <li class="open-burger__option">
+                        <a class="open-burger__ref" href="#producers">Производителям</a>
+                    </li>
+                    <li class="open-burger__option">
+                        <a class="open-burger__ref" href="#service-centers">Наши сервисные центры</a>
+                    </li>
+                    <li class="open-burger__option">
+                        <a class="open-burger__ref" href="#contacts">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="open-burger__footer-content">
+            <div class="open-burger__footer">
+                <div class="open-burger__footer-contacts">
+                    <div class="open-burger__contacts">
+                        <div class="open-burger__call">
+                            <button class="icon-button">
+                                <img class="icon-image" src="img/icons/phone.svg" width="20px" height="20px">
+                            </button>
+                        </div>
+                        <div class="open-burger__chat">
+                            <button class="icon-button">
+                                <img class="icon-image" src="img/icons/chat.svg" width="20px" height="20px">
+                            </button>
+                        </div>
+                        <div class="open-burger__profile">
+                            <button class="icon-button">
+                                <img class="icon-image" src="img/icons/profile.svg" width="20px" height="20px">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="open-burger__email">
+                        <div class="open-burger__mail">
+                            mail@cps.com
+                        </div>
+                        <div class="open-burger__phone">
+                            8 800 890 8900
+                        </div>
+                    </div>
+                    <ul class="open-burger__languages">
+                        <li>
+                            <button class="open-burger_ru lang-button">
+                                RU
+                            </button>
+                        </li>
+                        <li>
+                            <button class="open-burger_en lang-button">
+                                EN
+                            </button>
+                        </li>
+                        <li>
+                            <button class="open-burger_ch lang-button">
+                                CH
+                            </button>
+                        </li>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+    </footer>
+
 </body>
 </html>

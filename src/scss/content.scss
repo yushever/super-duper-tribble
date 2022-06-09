@@ -1,0 +1,103 @@
+.content__heading {
+    font-weight: 700;
+    color: #1B1C21;
+    font-size: 28px;
+    letter-spacing: -0.6px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    &::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 4px;
+        height: 40px;
+        margin-right: 16px;
+        background: $psdColor;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+}
+.content__list{
+    display: flex;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    margin-left: 16px;
+    .content__option {
+        height: 40px;
+        border: none;
+        background-color: transparent;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: -0.2px;
+        white-space: nowrap;
+        color: $actColor;
+        padding: 8px 16px 8px 16px;
+        margin-bottom: 16px;
+        &:hover {
+            background-color: $menuColor;
+            border: 2px solid $borderColor;
+            border-radius: 6px;
+        }
+    }
+}
+.content__main {
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: 768px) {
+        flex-wrap: nowrap;
+    }
+    .content__text {
+        max-width: 288px;
+        font-size: 14px;
+        color: $text;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        margin-left: 16px;
+        margin-right: 16px;
+        height: 90px;
+        overflow: hidden;
+        padding-left: 10px;
+        @media screen and (min-width: 768px) {
+            height: 160px;
+            min-width: 312px;
+            line-height: 20px;
+        }
+        @media screen and (min-width: 1440px) {
+            min-width: 490px;
+        }
+    }
+    .content__more {
+        border: 2px;
+        background-color: transparent;
+        font-size: 16px;
+        font-weight: 500;
+        width: 132px;
+        height: 24px;
+        line-height: 24px;
+        color: $text;
+        margin-left: 32px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        padding-right: 0;
+        padding-left: 16px;
+        background-image: url("../img/icons/arrow.svg");
+        background-size: 7.41px;
+        background-repeat: no-repeat;
+        background-position: 0px 7px;
+    }
+    .content__image {
+        width: 100%;
+        max-width: 531px;
+        height: auto;
+        @media screen and (min-width: 768px) {
+            border-radius: 6px;
+            margin-left: 48px;
+            margin-right: 25px;
+            max-width: 110%;
+        }
+        @media screen and (min-width: 1440px) {
+            border-radius: 6px;
+            margin-left: 30px;
+            margin-right: 25px;
+        }
+    }
+}

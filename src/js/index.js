@@ -1,3 +1,4 @@
 import '../scss/style.scss';
+import '../js/menu.js';
 
-console.log('Works!');
+console.log('p!');

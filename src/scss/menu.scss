@@ -1,0 +1,139 @@
+.open-burger {
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 800px;
+    background-color: $menuColor;
+    z-index: 2;
+    @media screen and (min-width: 360px) {
+        min-width: 320px;
+        max-width: 320px;
+    }
+    @media screen and (min-width: 361px) {
+        box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+    }
+    @media screen and (min-width: 1440px) {
+        position: relative;
+        left: -400px;
+        top: -600px;
+        box-shadow: none;
+    }
+
+    .open-burger__content {
+        flex: 1 0 auto;
+        .open-burger__header {
+            margin-left: 24px;
+    
+            // margin-top: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .open-burger__close {
+                display: flex;
+                margin-top: 20px;
+                .open-burger__close-button {
+                    margin-right: 24px;
+                    margin-top: 3px;
+                    @media screen and (min-width: 1440px) {
+                        display: none;
+                    }
+                }
+            }
+            .open-burger__search {
+                margin-right: 24px;
+                margin-top: 10px;
+            }
+        }
+    
+        .open-burger__menu {
+            padding-top: 50px;
+            padding-bottom: 30px;
+            font-weight: 550;
+            font-size: 16px;
+            letter-spacing: -0.2px;
+            line-height: 24px;
+        
+            .open-burger__option {
+                padding-bottom: 24px;
+                .open-burger__ref {
+                position: relative;
+                text-decoration: none;
+                color: $text;
+                transition: opacity 0.1s linear;
+                margin-left: 24px;
+                &:hover {
+                opacity: 0.6;
+                }
+                &:hover::before {
+                    content: "";
+                    position: absolute;
+                    width: 4px;
+                    height: 32px;
+                    left: -25px;
+                    top:-5px;
+                    background: $psdColor;
+                    transform: matrix(-1, 0, 0, 1, 0, 0);
+                }
+                }
+            }
+        }
+    }
+    .open-burger__footer-content {
+        flex: 0 0 auto;
+        .open-burger__footer {
+            display: flex;
+            margin-left: 24px;
+            .open-burger__contacts {
+                display: flex;
+                
+                .open-burger__call {
+                    margin-right: 16px;
+                }
+                .open-burger__chat {
+                    margin-right: 16px;
+                }
+            }
+            .open-burger__email {
+                margin-top: 16px;
+                margin-bottom: 40px;
+                .open-burger__phone {
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 32px;
+                    letter-spacing: -0.6px;
+                    color: $text;
+                    padding-top: 12px;
+                }
+                .open-burger__mail {
+                    font-weight: 550;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.2px;
+                    color: $text;
+                }
+            }
+            .open-burger__languages {
+                display: flex;
+                padding-bottom: 32px;
+                    .lang-button {
+                        background-color: transparent;
+                        font-family: "TTLakes";
+                        font-style: normal;
+                        font-weight: 550;
+                        font-size: 16px;
+                        line-height: 24px;
+                        letter-spacing: -0.2px;
+                        margin-right: 7px;
+                        &:hover {
+                            color: $actColor;
+                        }
+                    }
+            }
+        }
+    }
+}
