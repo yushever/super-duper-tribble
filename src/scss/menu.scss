@@ -21,9 +21,8 @@
         box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
     }
     @media screen and (min-width: 1440px) {
-        position: absolute;
+        position: static;
         display: block;
-
         box-shadow: none;
     }
 
@@ -31,8 +30,11 @@
         flex: 1 0 auto;
         .open-burger__header {
             margin-left: 24px;
+            @media screen and (min-width: 1440px) {
+                margin-top: 10px;
+            }
     
-            // margin-top: 24px;
+            
             display: flex;
             align-items: center;
             justify-content: space-between;
