@@ -4,6 +4,10 @@
     justify-content: space-between;
     height: 88px;
     background-color: $menuColor;
+    @media screen and (min-width: 1440px) {
+        background-color: $bgColor;   
+        height: 10px;     
+    }
 
     .header__main {
         display: flex; 
@@ -28,6 +32,10 @@
                 }
             }
         }
+        @media screen and (min-width: 1440px) {
+            display: none;
+        
+        }
     }
     
     .header__extra {
@@ -35,16 +43,41 @@
         .header__contacts {
             display: none;
             justify-content: space-evenly;
+            @media screen and (min-width: 768px) {
+                display: flex;
+            }
+            
             .header__call {
                 margin-right: 16px;
+                @media screen and (min-width: 1440px) {
+                    display: none;
+                }
             }
+            
             .header__chat {
                 margin-right: 16px;
+                @media screen and (min-width: 1440px) {
+                    display: none;
+                }
             }
+            .header__profile {
+                @media screen and (min-width: 1440px) {
+                    display: none;
+                }
+            }
+            
         }
         .header__repair-status {
             display: flex;
             justify-content: space-evenly;
+            @media screen and (min-width: 1440px) {
+                position: absolute;
+                top: 40px;
+                right: 30px;
+                // display: block;
+                // margin-left: auto;  
+                // justify-content: right;
+            }
             &::before {
                 content: "";
                 width: 2px;
@@ -52,27 +85,56 @@
                 background: $elmColor;
                 border-radius: 1px;
                 margin: 4px 16px;
-            }
+                @media screen and (min-width: 1440px) {
+                    display: none;
+                    
+                }
+            }     
             .header__repair {
                 margin-right: 16px;
+                display: flex;
+                .repair-status__label {
+                    color: $text;
+                    font-weight: 550;
+                    font-size: 16px;
+                    line-height: 24px;
+                    text-align: right;
+                    letter-spacing: -0.2px;
+                    padding-right: 10px;
+                    padding-top: 5px;
+                    display: none;
+                    @media screen and (min-width: 1440px) {
+                        display: block; 
+                        // position: absolute;
+                    }
+                }
+
             }
             .header__check-status {
                 margin-right: 16px;
+                display: flex;
+                .repair-status__label {
+                    color: $text;
+                    font-weight: 550;
+                    font-size: 16px;
+                    line-height: 24px;
+                    text-align: right;
+                    letter-spacing: -0.2px;
+                    padding-right: 10px;
+                    padding-top: 5px;
+                    display: none;
+                    @media screen and (min-width: 1440px) {
+                        display: block; 
+                    }
+                }
+
             }
             
         }
-        @media screen and (min-width: 768px) {
-            .header__contacts {
-                display: flex;
-            }
-        }
+
 
     }
 
 }
-@media screen and (min-width: 1440px) {
-    .header {
-        display: none;
-    }
-}
+
 

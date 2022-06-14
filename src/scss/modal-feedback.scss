@@ -1,0 +1,192 @@
+.modal-feedback {
+    padding: 40px 16px 24px 16px;
+
+    position: fixed;
+    width: auto;
+    // height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $bgColor;
+    z-index: 50;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    // overflow-y: auto;
+    // overflow-x: hidden;
+    &.open {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    @media screen and (min-width: 470px) {
+        padding: 40px 16px 24px 16px;
+        max-width: 440px;
+        min-width: 440px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+
+    }
+    .modal-feedback__close-button {
+        
+        // left: 16px;
+        // top: 24px;
+        @media screen and (min-width: 768px) {
+            position: absolute;
+            left: -60px;
+            // top: 35px;
+            z-index: 50;
+            
+        }
+    }
+    .modal-feedback__header {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.6px;
+        color: $text;
+        margin-top: 40px;
+        margin-bottom: 24px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            left: -16px;
+            top: -5px;
+            width: 4px;
+            height: 40px;
+            margin-right: 16px;
+            background: $psdColor;
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+        }
+        @media screen and (min-width: 768px) {
+            margin-top: 5px;
+        }
+
+    }
+    .modal-feedback__form {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 620px;
+        
+        
+        .modal-feedback__name {
+            border: 1px solid $elmColor;
+            border-radius: 8px;
+            height: 48px;
+            margin-bottom: 16px;
+            padding-left: 16px;
+            &:focus {
+                border: 1px solid $elmColor;
+            }
+            &::placeholder {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                color: $placeColor;
+            }
+
+        }
+        .modal-feedback__phone {
+            border: 1px solid $elmColor;
+            border-radius: 8px;
+            height: 48px;
+            margin-bottom: 16px;
+            padding-left: 16px;
+            &::placeholder {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                color: $placeColor;
+            }
+
+        }
+        .modal-feedback__email {
+            border: 1px solid $elmColor;
+            border-radius: 8px;
+            height: 48px;
+            margin-bottom: 16px;
+            padding-left: 16px;
+            &::placeholder {
+                
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                color: $placeColor;
+            }
+
+        }
+        .modal-feedback__message {
+            padding-left: 16px;
+            padding-top: 12px;
+            border: 1px solid $elmColor;
+            border-radius: 8px;
+            height: 118px;
+            margin-bottom: 16px;
+            resize: none;
+            &::placeholder {
+                
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                color: $placeColor;
+            }
+
+        }
+        .modal-feedback__terms {
+            font-weight: 550;
+            font-size: 14px;
+            line-height: 16px;
+            color: $actColor;
+            .modal-feedback__important {
+                color: $btnColor;
+            }
+        }
+        .modal-feedback__button {
+            position: relative;
+            left: 160px;
+            bottom: -10px;
+            width: 119px;
+            height: 32px;
+            background-color: $btnColor;
+            border-radius: 16px;
+            z-index: 10;
+            @media screen and (min-width: 401px) {
+                left: 250px;
+                bottom: -10px;
+            }
+    
+            .modal-feedback__button-text {
+                position: absolute;
+                top: 50%;
+                left: 45px;
+                margin-right: 50%;
+                transform: translate(-50%, -50%);
+                color: $menuColor;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 24px;
+                letter-spacing: -0.15px;
+
+            }
+            .modal-feedback__arrow {
+                position: absolute;
+                top: 50%;
+                left: 100px;
+                margin-right: 50%;
+                transform: translate(-50%, -50%);
+
+            }
+
+        }
+    }
+}

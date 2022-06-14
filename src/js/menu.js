@@ -40,10 +40,12 @@ closeButton.addEventListener('click', function(evt){
     body.classList.remove ('overlay');
     openedMenu = false;
 });
-document.addEventListener ('mouseup', function (e) {
-    console.log(e.target);
-    if (e.target.className === "overlay") {
-        menu.classList.add ('hidden');
-        body.classList.remove ('overlay');
-    }
-});
+
+// menu.style.height = body.style.height;
+// document.addEventListener ('mouseup', function (e) {
+//     console.log(e.target);
+//     if (e.target.className === "overlay") {
+//         menu.classList.add ('hidden');
+//         body.classList.remove ('overlay');
+//     }
+// });

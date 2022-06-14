@@ -1,13 +1,16 @@
 .open-burger {
-    height: 100vh;
+    height: 100%;
+    margin-bottom: 0;
     position: absolute;
     display: flex;
     flex-direction: column;
     left: 0;
     top: 0;
+    bottom: 0;
     min-width: 100%;
     max-width: 100%;
     min-height: 800px;
+    // max-height: 100%;
     background-color: $menuColor;
     z-index: 2;
     @media screen and (min-width: 360px) {
@@ -18,9 +21,9 @@
         box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
     }
     @media screen and (min-width: 1440px) {
-        position: relative;
-        left: -400px;
-        top: -600px;
+        position: absolute;
+        display: block;
+
         box-shadow: none;
     }
 
@@ -85,6 +88,9 @@
     }
     .open-burger__footer-content {
         flex: 0 0 auto;
+        @media screen and (min-width: 1440px) {
+            margin-top: 100px;
+        }
         .open-burger__footer {
             display: flex;
             margin-left: 24px;

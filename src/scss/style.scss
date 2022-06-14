@@ -6,11 +6,22 @@ $text: #1B1C21;
 $psdColor: #41F6D7;
 $actColor: #7E7E82;
 $borderColor: #B8FFEC;
+$headerColor: #D9FFF5;
+$placeColor: #B5B6BC;
 
 @import "src/scss/null.scss";
 @import "src/scss/header.scss";
 @import "src/scss/menu.scss";
 @import "src/scss/content.scss";
+@import "swiper/swiper.scss";
+@import "swiper/modules/navigation/navigation.scss";
+@import "swiper/modules/pagination/pagination.scss";
+@import "src/scss/brands.scss";
+@import "src/scss/devices.scss";
+@import "src/scss/prices.scss";
+@import "src/scss/footer.scss";
+@import "src/scss/modal-feedback.scss";
+@import "src/scss/modal-call.scss";
 
 @font-face {
   font-family: "TTLakes";
@@ -48,21 +59,36 @@ body {
   font-family: "TTLakes";
   max-width: 1440px;
   margin: auto;
+  color: $bgColor;
+  
+  @media screen and (min-width: 768px) {
+    position: relative;
+  }
   &.overlay::before {
     content: "";
-    display: block;
+    width: 100%;
+    height: 100%;
+
+    // display: block;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    position: absolute;
-    z-index: 1;
+    position: fixed;
+    z-index: 2;
     background-color: $menuColor;
+
     mix-blend-mode: normal;
     opacity: 0.96;
+    
+  }
+
+  main {
+    background-color: $bgColor;
   }
 }
 .hidden {
   display: none;
 }
+
 

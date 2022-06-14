@@ -1,0 +1,64 @@
+.footer {
+    display: flex;
+    background-color: $bgColor;
+    border-bottom: 1px solid $headerColor;
+    height: 147px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7E7E82;
+    mix-blend-mode: normal;
+    opacity: 0.72;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 24px;
+    padding-right: 24px;
+    
+    @media screen and (min-width: 768px) {
+        height: 105px;
+        flex-direction: row;
+        flex-wrap: no-wrap;
+        justify-content: space-between;
+    }
+    @media screen and (min-width: 1440px) {
+        height: 85px;
+        flex-wrap: no-wrap;
+        justify-content: space-between;
+    }
+
+    .footer__team {
+        padding-top: 16px;
+        width: 219px;
+        text-align: center;
+        @media screen and (min-width: 768px) {
+            text-align: left;
+            padding-top: 32px;
+        }
+    }
+    .footer__confidence {
+        padding-top: 16px;
+        min-width: 215px;
+        text-align: center;
+        @media screen and (min-width: 768px) {
+            padding-top: 32px;
+            
+        }
+
+    }
+    .footer__oferta {
+        padding-top: 16px;
+        width: 315px;
+        text-align: center;
+        @media screen and (min-width: 768px) {
+            text-align: right;
+            width: 215px;
+            padding-top: 32px;
+        }
+        @media screen and (min-width: 1440px) {
+            width: 330px;
+        }
+
+    }
+
+}
